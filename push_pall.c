@@ -19,8 +19,7 @@ void push(stack_t **stack, unsigned int line_number)
 	if (op_toks[1] == NULL)
 	{
 		set_last_op_tok(push_int_failure(line_number));
-		return;
-	}
+		return; }
 	for (i = 0; op_toks[1][i]; i++)
 	{
 		if (op_toks[1][i] == '-' && i == 0)
@@ -28,8 +27,7 @@ void push(stack_t **stack, unsigned int line_number)
 		if (op_toks[1][i] < '0' || op_toks[1][i] > '9')
 		{
 			set_last_op_tok(push_int_failure(line_number));
-			return;
-		}
+			return; }
 	}
 	new->n = atoi(op_toks[1]);
 	if (check_mode(*stack) == STACK)
@@ -39,8 +37,7 @@ void push(stack_t **stack, unsigned int line_number)
 		new->next = tmp;
 		if (tmp)
 			tmp->prev = new;
-		(*stack)->next = new;
-	}
+		(*stack)->next = new; }
 	else
 	{
 		tmp = *stack;
