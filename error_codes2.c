@@ -49,3 +49,15 @@ int div_failure(unsigned int line_number)
 	return (EXIT_FAILURE);
 }
 
+/**
+ * pchar_failure - Prints pchar error messages.
+ * @line_number: Line number in Monty bytecodes file containing error.
+ * @message: The corresponding error message to print.
+ * Return: EXIT_FAILURE.
+ */
+
+int pchar_failure(unsigned int line_number, char *message)
+{
+	fprintf(stderr, "L%u: can't pchar, %s\n", line_number, message);
+	return (EXIT_FAILURE);
+}
