@@ -45,6 +45,7 @@ int malloc_failure(void);
 int push_int_failure(unsigned int line_number);
 int pint_failure(unsigned int line_number);
 int pop_failure(unsigned int line_number);
+int swap_failure(unsigned int line_number, char *op);
 
 /* supporting functions */
 void set_last_op_tok(int error_code);
@@ -69,4 +70,5 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 #endif
