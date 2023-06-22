@@ -43,6 +43,7 @@ int f_open_failure(char *filename);
 int unknown_op_failure(char *opcode, unsigned int line_number);
 int malloc_failure(void);
 int push_int_failure(unsigned int line_number);
+int pint_failure(unsigned int line_number);
 
 /* supporting functions */
 void set_last_op_tok(int error_code);
@@ -65,6 +66,6 @@ int process_monty(FILE *script_fd);
 /* Functions */
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-
+void pint(stack_t **stack, unsigned int line_number);
 
 #endif
