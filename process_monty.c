@@ -80,6 +80,7 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	int i;
