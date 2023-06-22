@@ -46,6 +46,7 @@ int push_int_failure(unsigned int line_number);
 int pint_failure(unsigned int line_number);
 int pop_failure(unsigned int line_number);
 int swap_failure(unsigned int line_number, char *op);
+int div_failure(unsigned int line_number);
 
 /* supporting functions */
 void set_last_op_tok(int error_code);
@@ -74,4 +75,5 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
+void divide(stack_t **stack, unsigned int line_number);
 #endif

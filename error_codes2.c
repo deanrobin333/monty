@@ -37,3 +37,15 @@ int swap_failure(unsigned int line_number, char *op)
 	return (EXIT_FAILURE);
 }
 
+/**
+ * div_failure - Prints division error messages for division by 0.
+ * @line_number: Line number in Monty bytecodes file containing error.
+ * Return: EXIT_FAILURE.
+ */
+
+int div_failure(unsigned int line_number)
+{
+	fprintf(stderr, "L%u: division by zero\n", line_number);
+	return (EXIT_FAILURE);
+}
+
