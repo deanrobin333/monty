@@ -13,4 +13,6 @@ void sub(stack_t **stack, unsigned int line_number)
 		set_last_op_tok(swap_failure(line_number, "sub"));
 		return;
 	}
+	(*stack)->next->next->n -= (*stack)->next->n;
+	pop(stack, line_number);
 }
